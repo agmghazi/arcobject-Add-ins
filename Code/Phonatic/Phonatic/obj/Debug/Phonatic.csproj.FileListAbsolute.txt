@@ -1,0 +1,11 @@
+C:\AhmedCodes\arcobjects examples\Phonatic\Phonatic\bin\Debug\Phonatic.dll
+C:\AhmedCodes\arcobjects examples\Phonatic\Phonatic\bin\Debug\Phonatic.pdb
+C:\AhmedCodes\arcobjects examples\Phonatic\Phonatic\obj\Debug\Phonatic.dll
+C:\AhmedCodes\arcobjects examples\Phonatic\Phonatic\obj\Debug\Phonatic.pdb
+C:\AhmedCodes\arcobjects examples\Phonatic\Phonatic\bin\Debug\Phonatic.esriAddIn
+\\Mac\Home\Downloads\Phonatech\Code\Phonatic\Phonatic\bin\Debug\Phonatic.dll
+\\Mac\Home\Downloads\Phonatech\Code\Phonatic\Phonatic\bin\Debug\Phonatic.pdb
+\\Mac\Home\Downloads\Phonatech\Code\Phonatic\Phonatic\obj\Debug\Phonatic.csprojResolveAssemblyReference.cache
+\\Mac\Home\Downloads\Phonatech\Code\Phonatic\Phonatic\obj\Debug\Phonatic.dll
+\\Mac\Home\Downloads\Phonatech\Code\Phonatic\Phonatic\obj\Debug\Phonatic.pdb
+\\Mac\Home\Downloads\Phonatech\Code\Phonatic\Phonatic\bin\Debug\Phonatic.esriAddIn
