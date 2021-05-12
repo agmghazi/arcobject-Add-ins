@@ -30,9 +30,19 @@ namespace Phonatic
             IDataset pDS = (IDataset)pfeaturelayer.FeatureClass;
             TowerManager tm = new TowerManager(pDS.Workspace);
 
-            Tower t = tm.GetTowerByID("T04");
+            int x = arg.X;
+            int y = arg.Y;
+            IPoint pPoint = pMxdoc.ActiveView.ScreenDisplay.DisplayTransformation.ToMapPoint(x, y);
 
-            //IPoint pPoint = pMxdoc.ActiveView.ScreenDisplay.DisplayTransformation.ToMapPoint(x, y);
+            Tower t = tm.GetNearestTower(pPoint,10);
+
+            if (t == null)
+            {
+                MessageBox.Show("No towers where found within the area");
+                return;
+            }
+            //  Tower t = tm.GetTowerByID("T04");
+
 
             MessageBox.Show("Tower id  " + t.ID + Environment.NewLine + "Type " + t.TowerType + Environment.NewLine + "Networkband: " + t.NetworkBand);
 
