@@ -1,0 +1,30 @@
+Episode 5
+Build Class Diagram (UML)
+
+Tower t = new Tower();
+t.id = "T1"; 
+t.GetConnectedCustomers();
+t.GetTowerLog(1 month); 
+
+-- Tower class
+--- Attributes
+--- Draw range, id etc..
+
+
+-TowerManager class
+-- Get a tower by iD (Tower)
+-- Get nearest tower to a point by network band :Tower
+-- Find Dead Areas 
+-- Find 4G Areas 
+-- Find 3G Areas
+
+-- Phone class
+--- Attributes, current location, active band, all, lte only, 3g only etc..
+--- Find nearest towers to a phone (returns a tower object)
+--- Connect to Tower (creates a log entry in the tower table)
+--- Get current signal %
+
+
+Write add-in to test and create a tower by id.. 
+
+Write an Add-in in C# Tool to calculate the signal strength on a given point.

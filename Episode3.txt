@@ -1,0 +1,83 @@
+1- Talk about COM and .NET framework
+1993 COM was invented by Microsoft.. 
+
+Animal (Mummels ) Abstract Class, Interface 
+MakeSound
+Name
+
+Mummle 
+
++Dog 
+MakeSound
+
++Cat
+MakeSound
+
++Sheep
+MakeSound
+
++Panda 
+MakeSound
+
++Ostrech (Animal) its a mummle 
+
+
+
+Ostretch o = new Ostretch();
+//ok
+Animal a1 = o; 
+//break
+Mummle m = o; 
+
+---
+Animal a = new Dog();
+Animal b = new Cat();
+Animal c = new Panda();
+Animal d = new Panda();
+
+Mummle m = a;
+
+
+Animal animals [] = new Array();
+
+animals.add(a);
+animals.add(b);
+animals.add(c);
+animals.add(d);
+
+foreach (Animal newanimal in animals)
+   newanimal.MakeSound(); //polymorphism 
+
+//i'm working with an array of animals.. 
+Program for an Interface not an Implementation... 
+
+Dog d = new Dog();
+
+.NET! 
+
+FRAMEWORK! 
+Multiple programming langauges..(C#,VB.NET, J#, F#..-> CIL ->CIR)  , Java JRE
+Object oriented 
+Supports WCF
+
+
+
+- Talk about interaction between .NET to COM
+ArcObjects Fine grained... Arcobjects is built around COM (c++)
+Layer, FeatureLayer, GeoFeatureLayer, CADFeatureLayer .. 
+ISymbol, MarkerSymbol, SimpleMarkerSymbol, LineSymbol (From Point to Point), PictureMarkerSymbol (AddPicture)
+
+Coarse grained... Map
+
+Symbol
+AddPicture
+FromPoint
+ToPoint.
+.
+
+.NET 		(COM Interop)	 COM 
+ISymbol s ;	 	(.NETSymbol) 	ISymbol (Esri)
+		AddToMap	AddToMap
+
+RCW (Runtime Callable Wrapper)
+

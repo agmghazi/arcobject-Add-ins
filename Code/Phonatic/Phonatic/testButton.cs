@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using ESRI.ArcGIS.ArcMapUI;
 using ESRI.ArcGIS.Carto;
 using ESRI.ArcGIS.Geometry;
+using ESRI.ArcGIS.Geodatabase;
 
 namespace Phonatic
 {
@@ -23,13 +24,17 @@ namespace Phonatic
 
         protected override void OnMouseUp(ESRI.ArcGIS.Desktop.AddIns.Tool.MouseEventArgs arg)
         {
-            int x = arg.X;
-            int y = arg.Y;
+            IMxDocument pMxdoc = (IMxDocument)ArcMap.Application.Document;
 
-            IMxDocument mxDocument = (IMxDocument)ArcMap.Application.Document;
-            IPoint pPoint = (IPoint)mxDocument.ActivatedView.ScreenDisplay.DisplayTransformation.ToMapPoint(x, y);
+            IFeatureLayer pfeaturelayer = (IFeatureLayer)pMxdoc.ActiveView.FocusMap.Layer[0];
+            IDataset pDS = (IDataset)pfeaturelayer.FeatureClass;
+            TowerManager tm = new TowerManager(pDS.Workspace);
 
-            MessageBox.Show("Mouse X: " + x + Environment.NewLine + "Y: " + y + "Map Point X: "+ pPoint.X + Environment.NewLine + "Y: " + pPoint.Y);
+            Tower t = tm.GetTowerByID("T04");
+
+            //IPoint pPoint = pMxdoc.ActiveView.ScreenDisplay.DisplayTransformation.ToMapPoint(x, y);
+
+            MessageBox.Show("Tower id  " + t.ID + Environment.NewLine + "Type " + t.TowerType + Environment.NewLine + "Networkband: " + t.NetworkBand);
 
 
         }
