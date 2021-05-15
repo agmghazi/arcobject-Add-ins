@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ESRI.ArcGIS.Geometry;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -43,5 +44,10 @@ namespace Phonatic
         /// The area of the tower 
         /// </summary>
         public double TowerBaseArea { get; set; }
+
+        /// <summary>
+        /// get twoer location of  the tower 
+        /// </summary>
+        public IPoint TowerLocation { get; set; }
     }
 }

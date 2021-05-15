@@ -47,7 +47,7 @@ namespace Phonatic
               tower.ID = pTowerFeature.get_Value(pTowerFeature.Fields.FindField("TOWERID")); ;
             tower.NetworkBand = pTowerFeature.get_Value(pTowerFeature.Fields.FindField("NETWORKBAND"));
             tower.TowerType = pTowerFeature.get_Value(pTowerFeature.Fields.FindField("TOWERTYPE"));
-
+            tower.TowerLocation =(IPoint) pTowerFeature.Shape;
             return tower;
         }
         public Tower GetNearestTower(IPoint pPoint, int buffer)
